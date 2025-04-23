@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <article>
+            <div>
+                <p>Ingrese la tarea en el input, especifique su prioridad y asignele una categoria</p>
+            <form class="form" action="" id="formulario-tarea">
+                <input type="text" name="" id="tarea-texto" placeholder="Escriba la tarea...">
+                <select name="tarea-prioridad" id="tarea-prioridad" class="form-select form-select-lg mb-3" aria-label="Default select example">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <select name="tarea-categoria" id="tarea-categoria" class="form-select form-select-lg mb-3" aria-label="Default select example">
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>  
+                <button class="btn btn-primary" onclick="cargarDatos()">Cargar/agregar</button>
+            </form>
+            </div>
+            <div>
+                <p>Filtrado de tareas por categoria</p>
+                <select name="" id="datoFiltro" class="form-select form-select-lg mb-3" aria-label="Default select example">
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+                <button class="btn btn-primary" onclick="mostrarTareasFiltradas()">Filtrar</button>
+                <button class="btn btn-secondary" onclick="mostrarTodas()">Mostrar todas</button>
+            </div>
+        </article>
+        <hr>
+        <div class="content2">
+            
+            <ul class="description-tareas list-unstyled">
+                <li class="d-flex align-items-center mb-1">
+                    <span class="estado-circulo bg-danger me-2"></span> Tarea Pendiente
+                </li>
+                <li class="d-flex align-items-center mb-1">
+                    <span class="estado-circulo bg-warning me-2"></span> Tarea en Proceso
+                </li>
+                <li class="d-flex align-items-center">
+                    <span class="estado-circulo bg-success me-2"></span> Tarea Finalizada
+                </li>
+            </ul>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <article class="zona-de-tareas">
+            <p>Tareas:</p>
+            <ul class="lista-tareas list-group list-group-flush" id="lista-tareas"></ul>
+        </article>
+    </section>
+    
+    <script src="./javascript.js"></script>
+</body>
+</html>
